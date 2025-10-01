@@ -11,4 +11,12 @@ Feature: Program start dates and Refund dates
     Background:
         Given user is on the enrollment page
 
+    Scenario: Verify program start date and refund date are displayed
+        Then the program start date is displayed
+        Then the program refund date is displayed
+
+    Scenario: Verify that the pragram start date and refund date are correct
+        Then the displayed start date for the program is correct
+        Then the displayed refund date for the program is correct
+
 
