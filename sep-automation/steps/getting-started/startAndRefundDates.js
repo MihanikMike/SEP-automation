@@ -5,8 +5,6 @@ import { productInfo } from "../../utilities/qa-data-reader.js";
 // Add your step definitions here
 
 
-Given("user is on the enrollment page", async function () {});
-
 Then("the program start date is displayed", async function () {});
 
 Then("the program refund date is displayed", async function () {});
