@@ -22,7 +22,7 @@ Then("the displayed start date for the program is correct", async function () {
   const EXPECTED_START_DATE = productInfo.startDate;
   console.log(`Expected start date: ${EXPECTED_START_DATE}`);
   console.log(`Actual start date: ${ACTUAL_START_DATE}`);
-  await expect(ACTUAL_START_DATE).toBe(EXPECTED_START_DATE);
+  expect(ACTUAL_START_DATE).toBe(EXPECTED_START_DATE);
 });
 
 Then("the displayed refund date for the program is correct", async function () {
@@ -30,5 +30,5 @@ Then("the displayed refund date for the program is correct", async function () {
   const EXPECTED_REFUND_DATE = productInfo.refundDate;
   console.log(`Actual refund date: ${ACTUAL_REFUND_DATE}`);
   console.log(`Expected refund date: ${EXPECTED_REFUND_DATE}`);
-  await expect(ACTUAL_REFUND_DATE).toBe(EXPECTED_REFUND_DATE);
+  expect(ACTUAL_REFUND_DATE).toBe(EXPECTED_REFUND_DATE);
 });
