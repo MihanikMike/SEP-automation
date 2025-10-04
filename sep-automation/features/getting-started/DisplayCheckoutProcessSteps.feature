@@ -15,12 +15,12 @@ Feature: Display the steps of the checkout process
     
     Scenario: Display all checkout process steps
         Then the system should display "Start Application" step
-        And the system should display "Payment Plan" step
-        And the system should display "Review" step
+        Then the system should display "Payment Plan" step
+        Then the system should display "Review" step
 
     Scenario: Highlight current step in blue
         Then the "Start Application" step should be highlighted in blue
 
     Scenario: Display inactive steps in grey
         Then the "Payment Plan" step should be displayed in grey
-        And the "Review" step should be displayed in grey
+        Then the "Review" step should be displayed in grey
