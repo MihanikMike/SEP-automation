@@ -23,3 +23,8 @@ Given("user completed the start application  step", async function () {
 
 });
 
+Given("user completed the paymant plan step", async function () {
+  await paymentPlanPage.selectPaymentPlan("upfront");
+  await paymentPlanPage.clickNextButton();
+});
+
