@@ -15,12 +15,13 @@ Feature: Display the steps of the checkout process
     
     Scenario: Display all checkout process steps
         Then the system should display "Start Application" step
-        Then the system should display "Payment Plan" step
+        Then the system should display "Payment plan" step
         Then the system should display "Review" step
+        Then the stepper should display all three steps in correct order
 
     Scenario: Highlight current step in blue
-        Then the "Start Application" step should be highlighted in blue
+        Then the Start Application step should be highlighted in blue
 
     Scenario: Display inactive steps in grey
-        Then the "Payment Plan" step should be displayed in grey
-        Then the "Review" step should be displayed in grey
+        Then the Payment Plan step should be displayed in grey
+        Then the Review step should be displayed in grey
