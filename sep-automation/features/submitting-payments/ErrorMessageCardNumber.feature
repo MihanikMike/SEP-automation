@@ -23,5 +23,5 @@ Scenario: Verify that an error message is displayed when the entered card number
 Scenario: Verify that an error message is displayed when the entered card number is too short
     When user enters a incomplete card number
     And user check the terns and conditions checkbox
-        Then the card number error message "Your card number is incomplete." is displayed
+    Then the card number error message "Your card number is incomplete." is displayed
 
