@@ -47,5 +47,4 @@ export const initElements = (argPage) => {
     reviewPaymentPage = new ReviewPaymentPage(page);
     // INITIALIZE PAGE INSTANCES HERE IF NEEDED...
 
-
 };

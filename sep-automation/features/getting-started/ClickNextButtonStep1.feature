@@ -14,10 +14,10 @@ Feature: Click on the next button on step 1
         Given user is on the enrollment page
 
     Scenario: User provides all fields
-        And user enters valid information for all fields
-        Then user should be able to click the next button on step 1
+        Then user enters valid information for all fields
+        Then user should be able to click the next button on step one
         
     
     Scenario: User provides only required fields
-        And user enters valid information for required fields
-        Then user should be able to click the next button on step 1
+        Then user enters valid information for required fields
+        Then user should be able to click the next button on step one
