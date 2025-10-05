@@ -14,7 +14,7 @@ When("user check the terns and conditions checkbox", async function () {
 });
 
 When("user enters a incomplete card number", async function () {
-    await reviewPaymentPage.enterCardNumber("1234567890123456");
+    await reviewPaymentPage.enterCardNumber("1234567");
 });
 
 Then("the card number error message {string} is displayed", async function (string) {

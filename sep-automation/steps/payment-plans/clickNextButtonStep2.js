@@ -1,6 +1,10 @@
 import { Given, Then, When } from "@cucumber/cucumber";
 import { expect} from "@playwright/test";
-import { paymentPlanPage, page } from "../../globalPagesSetup.js";
+import {
+  paymentPlanPage,
+  startApplicationPage,
+  page,
+} from "../../globalPagesSetup.js";
 import { productInfo } from "../../utilities/qa-data-reader.js";
 
 
@@ -69,7 +73,7 @@ When("user selects installments payment plan", async function () {
 Then("the installment payment summary should be displayed", async function () {
 
     await expect(paymentPlanPage.basePriceAmountUnderInstallments).toBeVisible();
-    await expect(paymentPlanPage.installmentAmountUnderInstallments).toBeVisible();
+    await expect(paymentPlanPage.installmentsNumberUnderInstallments).toBeVisible();
     await expect(paymentPlanPage.pricePerInstallmentsAmountUnderInstallments).toBeVisible();
     await expect(paymentPlanPage.firstMonthPaymentAmountUnderInstallments).toBeVisible();
   }
@@ -91,7 +95,7 @@ When("uset clicks the back button on payment plan page", async function () {
 
 Then("step one stepper should be blue", async function () {
     await expect(startApplicationPage.startApplicationStepCircle).toHaveCSS(
-        "background-color",
-        "rgb(1, 201, 255)"
+      "background-color",
+      "rgb(1, 201, 255)"
     );
 });
