@@ -11,7 +11,16 @@ Feature: Click on the next button on payment plans page   #! Test Only
     #* AC6: The back button should be displayed.
     #* AC7: By default, the pay button should be displayed.
 
-
     #TODO: Create scenarios that cover all the acceptance criteria
+
+    Background:
+        Given user is on the enrollment page
+        And user completed the start application  step
+
+    @sep16-1
+    Scenario: Verify that the next button is active when the plan is selected 
+        Then the next button on step two should be disabled be default 
+        When user selects upfront payment plan
+        Then the next button on step two should be enabled
 
 
