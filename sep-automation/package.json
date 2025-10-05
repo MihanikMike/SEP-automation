@@ -5,7 +5,7 @@
   "scripts": {
     "test": "npx cucumber-js",
     "test:tag:": "npx cucumber-js --tags @sep16",
-    "test:tag:dryrun": "npx cucumber-js --tags @sep16-1 --dry-run",
+    "test:tag:dryrun": "npx cucumber-js --tags @sep16-4 --dry-run",
     "test:smoke": "npx cucumber-js --tags @smoke",
     "Mac-open:report": "open reports/cucumber-report.html",
     "Windows-open:report": "start reports/cucumber-report.html"
