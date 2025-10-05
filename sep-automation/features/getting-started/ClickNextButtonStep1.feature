@@ -15,9 +15,9 @@ Feature: Click on the next button on step 1
 
     Scenario: User provides all fields
         Then user enters valid information for all fields
-        Then user should be able to click the next button on step 1
+        Then user should be able to click the next button on step one
         
     
     Scenario: User provides only required fields
         Then user enters valid information for required fields
-        Then user should be able to click the next button on step 1
+        Then user should be able to click the next button on step one

@@ -7,8 +7,8 @@ import path from 'path';
 const BROWSER_TYPE = "chrome";
 const HEADLESS_MODE = false;
 const MAXIMIZED_WINDOW = true;
-const SLOW_MOTION_DELAY = 2000; // slow mode in milliseconds
-const DEFAULT_TIMEOUT = 30000; // default timeout in milliseconds
+const SLOW_MOTION_DELAY = 1000; // slow mode in milliseconds
+const DEFAULT_TIMEOUT = 15000; // default timeout in milliseconds
 
 
 /**
