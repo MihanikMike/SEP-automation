@@ -11,6 +11,10 @@ export class StartApplicationPage extends BasePage {
       "(//div[@class = 'step-title'])[1]"
     );
 
+    this.programNameOnLeftSide = page.locator("//a[contains(text(),'Test Automation')]");
+
+    this.productInfoCard = page.locator("//div[@class='row info-holder']");
+
     this.paymentPlanText = page.locator("(//div[@class = 'step-title'])[2]");
 
     this.reviewText = page.locator("(//div[@class = 'step-title'])[3]");
@@ -94,6 +98,8 @@ export class StartApplicationPage extends BasePage {
     this.programStartDate = page.locator(
       "//div[contains(text(), 'Program Start Date')]/b[@class='info-value']"
     );
+
+    this.refundPolicy = page.locator("//span[@class='info-primary' and text()='100% refund']");
 
     this.refundEndDate = page.locator("(//b[@class='info-value'])[2]");
 
