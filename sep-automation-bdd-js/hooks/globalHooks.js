@@ -53,7 +53,9 @@ async function takeScreenshot(page, scenarioName) {
   fs.mkdirSync(screenshotsDir, { recursive: true });
 
   const currentDateTime = new Date().toISOString().replace(/[:T.]/g, '_').slice(0, -5);
-  const fileName = `${scenarioName.replace(/\s+/g, '_')}_${currentDateTime}.png`;
+  // Sanitize scenario name for use in filenames (remove characters not safe for filenames)
+  const safeScenarioName = scenarioName.replace(/[^a-z0-9\-_ ]/gi, '').replace(/\s+/g, '_');
+  const fileName = `${safeScenarioName}_${currentDateTime}.png`;
   const filePath = path.join(screenshotsDir, fileName);
 
   await page.screenshot({ path: filePath, fullPage: true });
