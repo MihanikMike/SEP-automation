@@ -17,7 +17,7 @@ Feature: View Product Landing Page
         Given user is on the enrollment page
 
     Scenario: Header shows "Cydeo Secure Checkout"
-        Then the page header should contain "Cydeo Secure checkout"
+        Then the page header should contain Cydeo Secure checkout
 
     Scenario: Program name is displayed on the product card
         Then the program name should be visible on the product info card

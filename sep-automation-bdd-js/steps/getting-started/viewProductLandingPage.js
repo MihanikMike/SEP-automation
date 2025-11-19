@@ -1,19 +1,19 @@
 import { Given, Then, When } from "@cucumber/cucumber";
 import { expect} from "@playwright/test";
-import { startApplicationPage, page } from "../../globalPagesSetup.js";
+import { startApplicationPage, leftMainPage, page } from "../../globalPagesSetup.js";
 import { productInfo } from "../../utilities/qa-data-reader.js";
 
-Then("the page header should contain {string}", async function (string) {
-    // Use a tolerant, case-insensitive contains check because the app header may vary slightly
-    const headerText = (await startApplicationPage.pageHeader.first().innerText()).trim();
-    if (!headerText.toLowerCase().includes(string.toLowerCase())) {
-      throw new Error(`Expected header to contain "${string}", but found "${headerText}"`);
-    }
-});
+Then(
+  "the page header should contain Cydeo Secure checkout", async function () {
+    // Logo should be visible and header should contain the expected text
+    await expect(leftMainPage.cydeoImageAtLeftWindow).toBeVisible();
+    await expect(leftMainPage.secureCheckout).toContainText("Secure checkout");
+  }
+);
 
 Then("the program name should be visible on the product info card", async function () {
-
-    await expect(startApplicationPage.programNameOnInfoCard).toBeVisible();
+  await expect(leftMainPage.programName).toBeVisible();
+  await expect(leftMainPage.programName).toContainText(productInfo.programName);
 
 });
 
@@ -28,15 +28,15 @@ Then("the footer left should contain a logo", async function () {
 });
 
 Then("the footer left should contain a link for {string}", async function (string) {
-  let linkTermsAndCondition = page.locator("//a[text()='Terms and conditions']");
-  let linkPrivacyPolicy = page.locator("//a[text()='Privacy Policy']");
-  let linkDisclaimer = page.locator("//a[text()='Disclaimer']");
-  let linkCoockiePolicy = page.locator("//a[text()='Cookie Policy']");
-
-  expect(linkTermsAndCondition).toBeVisible;
-  expect(linkPrivacyPolicy).toBeVisible;
-  expect(linkDisclaimer).toBeVisible;
-  expect(linkCoockiePolicy).toBeVisible;
+  
+  const link = leftMainPage.footerElements.filter({ hasText: string });
+  const count = await link.count();
+  if (count === 0) {
+    throw new Error(
+      `Expected a footer link containing "${string}", but none was found`
+    );
+  }
+  await expect(link.first()).toBeVisible();
 
 });
 
