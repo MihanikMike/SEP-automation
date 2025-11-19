@@ -16,4 +16,20 @@ Feature: View Product Landing Page
     Background:
         Given user is on the enrollment page
 
+    Scenario: Header shows "Cydeo Secure Checkout"
+        Then the page header should contain "Cydeo Secure checkout"
+
+    Scenario: Program name is displayed on the product card
+        Then the program name should be visible on the product info card
+
+    Scenario: Footer (left) contains logo and policy links in order
+        Then the footer left should contain a logo
+        And the footer left should contain a link for "Terms and conditions"
+        And the footer left should contain a link for "Privacy Policy"
+        And the footer left should contain a link for "Disclaimer"
+        And the footer left should contain a link for "Cookie Policy"
+
+    Scenario: Footer (right) shows contact information
+        Then the footer right should contain the text "Need help? Contact us at enrollment@cydeo.com"
+
 

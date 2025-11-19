@@ -112,7 +112,8 @@ export class StartApplicationPage extends BasePage {
     );
 
     this.footer = page.locator(
-      "//p[@class = 'footer-text' and contains(text(), 'Need help?')]"
+      "//p[@class = 'footer-text' and contains(text(), 'Need help?')]" 
+      
     );
 
     this.nextButton = page.locator(
@@ -128,6 +129,8 @@ export class StartApplicationPage extends BasePage {
     this.discountedPrice = page.locator("//b[@class='info-primary']");
 
     this.originalPrice = page.locator("//s[contains(.,'$')]");
+
+    this.pageHeader = page.locator("//p[@class='checkout-title']");
 
     
   }
