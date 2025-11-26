@@ -1,14 +1,7 @@
 import { Given, Then, When } from "@cucumber/cucumber";
 import { expect} from "@playwright/test";
-import {
-  paymentPlanPage,
-  startApplicationPage,
-  page,
-} from "../../globalPagesSetup.js";
+import { paymentPlanPage, startApplicationPage, page, } from "../../globalPagesSetup.js";
 import { productInfo } from "../../utilities/qa-data-reader.js";
-
-
-
 
 Then(
   "the next button on step two should be disabled be default",

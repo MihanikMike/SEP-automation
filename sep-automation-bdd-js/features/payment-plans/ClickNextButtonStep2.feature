@@ -15,7 +15,7 @@ Feature: Click on the next button on payment plans page   #! Test Only
 
     Background:
         Given user is on the enrollment page
-        And user completed the start application  step
+        And user completed the start application step
 
     @sep16-1
     Scenario: Verify that the next button is active when the plan is selected 

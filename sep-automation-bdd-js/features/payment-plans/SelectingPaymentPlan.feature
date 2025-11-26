@@ -10,3 +10,20 @@ Feature: Selecting a price plan
 
 
     #TODO: Create scenarios that cover all the acceptance criteria
+
+    Background:
+        Given user is on the enrollment page
+        And user completed the start application step
+
+    Scenario: Selecting the Upfront payment plan highlights the option
+        When user selects upfront payment plan
+        Then the upfront payment option should be highlighted
+
+    Scenario: Selecting the Installments payment plan activates the 'Next' button
+        When user selects installments payment plan
+        Then the next button on step two should be enabled
+
+    Scenario: Changing plan selection before finalizing
+        When user selects upfront payment plan
+        And user selects installments payment plan
+        And user selects upfront payment plan

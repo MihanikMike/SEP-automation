@@ -13,7 +13,7 @@ Given("user is on the enrollment page", async function () {
   await startApplicationPage.login();
 });
 
-Given("user completed the start application  step", async function () {
+Given("user completed the start application step", async function () {
   await startApplicationPage.enterFirstName("Mike");
   await startApplicationPage.enterLastName("Trenton");
   await startApplicationPage.enterEmail("mike.trenton@example.com");
